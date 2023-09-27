@@ -1,4 +1,4 @@
-class TripPackagesController < ApplicationController
+class Api::V1::TripPackagesController < ApplicationController
   before_action :set_trip_package, only: %i[ show edit update destroy ]
 
   # GET /trip_packages or /trip_packages.json
