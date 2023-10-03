@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { Route, Navigate, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import MyTrips from './components/MyTrips';
 
 function App() {
   const user = useSelector((state) => state.session.user);
@@ -11,7 +12,7 @@ function App() {
       <div className='App'>
         <Routes>
           <Route path="/" element={<Navigate to="/sign_in" />}/>
-          <Route path="sign_up" element={<SignUp/>} index />
+          <Route path="sign_up" element={<SignUp/>} />
           <Route path="sign_in" element={<Login/>} />
         </Routes>
       </div> 
@@ -21,8 +22,8 @@ function App() {
     return (
       <div className='App'>
         <Routes>
-          <Route path="/" element={<h1>{user.name}</h1>}/>
-          <Route path="sign_up" element={<Navigate to="/" />} index />
+          <Route path="/" element={<MyTrips />} />
+          <Route path="sign_up" element={<Navigate to="/" />} />
           <Route path="sign_in" element={<Navigate to="/" />} />
         </Routes>
       </div> 
