@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 // import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Item = ({ item }) => {
-  const { id, name, description, image, country, price } = item;
+  const { id, name, description, image_url, country, price } = item;
 
   return (
+      <Link to={`details/${id}`}>
     <div className="item">
-      <Link to={`items/${id}`}>
         <div className="item__data">
           <figure>
-            <img src={image} alt={name} />
+            <img src={image_url} alt={name} />
             <figcaption className="items__data-title">{name}</figcaption>
           </figure>
           <div className="item__details">
@@ -27,8 +27,8 @@ const Item = ({ item }) => {
             <InstagramIcon /> */}
           </div>
         </div>
-      </Link>
     </div>
+      </Link>
   );
 };
 
@@ -37,7 +37,7 @@ const Item = ({ item }) => {
 //     id: PropTypes.number,
 //     name: PropTypes.string,
 //     description: PropTypes.string,
-//     image: PropTypes.string,
+//     image_url: PropTypes.string,
 //     country: PropTypes.string,
 //     price: PropTypes.number,
 //   }).isRequired,
