@@ -1,19 +1,17 @@
 
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchTripPackages } from '../api/apiUrl'
+import { fetchTripPackagesAsync } from '../redux/tripPackageSlice';
 import Item from './Item';
-import { setTripPackages } from '../redux/tripPackageSlice';
+import { setSelectedTripPackage } from '../redux/tripPackageSlice';
 import { useParams } from 'react-router-dom';
 
 const MainPage = () => {
   const dispatch = useDispatch();
-  const tripPackages = useSelector((state) => state.tripPackage.tripPackages);
-
+  const tripPackages = useSelector((state) => state.tripPackages.tripPackages);
+  
   useEffect(() => {
-    fetchTripPackages().then((response) => {
-      dispatch(setTripPackages(response.data));
-    });
+      dispatch(fetchTripPackagesAsync());
   }, [dispatch]);
 
   const [selectedItem, setSelectedItem] = useState(null);

@@ -4,7 +4,7 @@ import tripPackageSlice from './tripPackageSlice';
 const store = configureStore({
   reducer: {
     
-    tripPackages: tripPackageSlice.reducer,
+    tripPackages: tripPackageSlice
   },
 });
 

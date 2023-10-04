@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import PropTypes from 'prop-types';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import InstagramIcon from '@material-ui/icons/Instagram';
+// import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Item = ({ item }) => {
   const { id, name, description, image, country, price } = item;
@@ -22,9 +22,9 @@ const Item = ({ item }) => {
             <p>Price: {price}</p>
           </div>
           <div className="item__socialMedia">
-            <FacebookIcon />
+            {/* <FacebookIcon />
             <TwitterIcon />
-            <InstagramIcon />
+            <InstagramIcon /> */}
           </div>
         </div>
       </Link>
@@ -32,15 +32,15 @@ const Item = ({ item }) => {
   );
 };
 
-Item.propTypes = {
-  item: PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    image: PropTypes.string,
-    country: PropTypes.string,
-    price: PropTypes.number,
-  }).isRequired,
-};
+// Item.propTypes = {
+//   item: PropTypes.shape({
+//     id: PropTypes.number,
+//     name: PropTypes.string,
+//     description: PropTypes.string,
+//     image: PropTypes.string,
+//     country: PropTypes.string,
+//     price: PropTypes.number,
+//   }).isRequired,
+// };
 
 export default Item;

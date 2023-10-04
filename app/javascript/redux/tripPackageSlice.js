@@ -29,7 +29,12 @@ const tripPackageSlice = createSlice({
   initialState,
   reducers: {
     setSelectedTripPackage: (state, action) => {
-      state.selectedTripPackage = action.payload;
+      if (action.payload) {
+        state.selectedTripPackage = action.payload;
+      } else {
+        
+        state.selectedTripPackage = [];
+      }
     },
     clearSelectedTripPackage: (state) => {
       state.selectedTripPackage = null;
@@ -53,7 +58,6 @@ const tripPackageSlice = createSlice({
 
 // Export actions and async thunk
 export const { setSelectedTripPackage, clearSelectedTripPackage } = tripPackageSlice.actions;
-export { fetchTripPackagesAsync }; 
 
 // Export the reducer
 export default tripPackageSlice.reducer;
