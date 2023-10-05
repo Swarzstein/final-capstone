@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-
   # GET /users
   # GET /users.json
   def index
@@ -8,8 +7,7 @@ class Api::V1::UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
-  end
+  def show; end
 
   def sign_in
     @user = User.find_by(name: user_params[:name])
@@ -17,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
       session[:user_id] = @user.id
       render json: @user
     else
-      render json: {error: "User not found"}, status: 404
+      render json: { error: 'User not found' }, status: 404
     end
   end
 
@@ -27,7 +25,7 @@ class Api::V1::UsersController < ApplicationController
       session[:user_id] = @user.id
       render json: @user
     else
-      render json: {error: @user.errors.full_messages}, status: 400
+      render json: { error: @user.errors.full_messages }, status: 400
     end
   end
 
@@ -37,5 +35,4 @@ class Api::V1::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name)
   end
-
 end
