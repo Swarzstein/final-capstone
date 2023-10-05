@@ -7,6 +7,7 @@ class CreateTripPackages < ActiveRecord::Migration[7.0]
       t.string :country
       t.decimal :price
       t.text :description
+      t.string :image_url
 
       t.timestamps
     end
