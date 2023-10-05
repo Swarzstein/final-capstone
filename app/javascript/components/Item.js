@@ -9,7 +9,7 @@ const Item = ({ item }) => {
   const { id, name, description, image_url, country, price } = item;
 
   return (
-      <Link to={`details/${id}`}>
+      <Link to={`details/${id}`} >
     <div className="item">
         <div className="item__data">
           <figure>

@@ -32,7 +32,7 @@ TripPackage.create([
         description: "The Great Wall is the largest man-made project in the world. " \
         "The complete route is over 20,000 km, stretching from the " \
         "east seaside to the west desert in northern China, winding up and down across mountains and plateaus like a dragon.",
-        image_url: "https://img.veenaworld.com/customized-holidays/world/dubai-egypt-israel/shdz5/shdz9-thb.jpg"
+        image_url: "https://ichef.bbci.co.uk/images/ic/1200x675/p01gq73t.jpg"
     },
     
 ])
