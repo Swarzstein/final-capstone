@@ -1,5 +1,5 @@
 import axios from "axios"
-import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, CURRENT_USER } from "./actionTypes"
+import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, CURRENT_USER } from "../actionTypes"
 
 export const signUp = (name) => {
   return  async dispatch => {

@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_26_203940) do
     t.string "country"
     t.decimal "price"
     t.text "description"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
