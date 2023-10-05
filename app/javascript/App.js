@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import { Route, Navigate, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-// import MyTrips from './components/MyTrips';
+import MyTrips from './components/MyTrips';
+import MainPage from './components/MainPage';
 import Details from './components/Details';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     return (
       <div className='App'>
         <Routes>
-          <Route path="/" element={<Details />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="sign_up" element={<Navigate to="/" />} />
           <Route path="sign_in" element={<Navigate to="/" />} />
           <Route path="details/:id" element={<Details />} />
