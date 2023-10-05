@@ -18,6 +18,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-container {
@@ -26,7 +27,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .h-nav-bar {
@@ -61,4 +62,57 @@
 .nav-link:hover {
   color: #fff;
   background-color: #97BF0F;
+}
+
+.nav-link:active {
+  color: #fff;
+  background-color: #97BF0F;
+}
+
+.pack-details {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.details-container {
+  width: 18vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.trip-pack-img-container {
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.name-container h1 {
+  width: 15vw;
+}
+
+.desc-table {
+
+}
+
+.description {
+  text-align: justify;
 }

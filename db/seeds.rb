@@ -18,7 +18,7 @@ TripPackage.create([
     },
     {
         name: "Nyungwe forest national park", 
-        country: "RWANDA", 
+        country: "Rwanda", 
         price: 600, 
         description: "Nyungwe is one of the oldest rainforests in Africa " \
         " and the largest expanse of forest in Rwanda, covering 1,019 km2 of dense Afromontane forests, " \
@@ -27,7 +27,7 @@ TripPackage.create([
     },
     {
         name: "Great Wall of China", 
-        country: "CHINE", 
+        country: "China", 
         price: 500, 
         description: "The Great Wall is the largest man-made project in the world. " \
         "The complete route is over 20,000 km, stretching from the " \
