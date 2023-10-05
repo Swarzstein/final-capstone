@@ -5,7 +5,7 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import MyTrips from './components/MyTrips';
 import MainPage from './components/MainPage';
-import Detail from './components/Detail';
+import Details from './components/Details';
 
 function App() {
   const user = useSelector((state) => state.session.user);
@@ -27,7 +27,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="sign_up" element={<Navigate to="/" />} />
           <Route path="sign_in" element={<Navigate to="/" />} />
-          <Route path="/details/:id" element={<Detail/>} />
+          <Route path="details/:id" element={<Details />} />
         </Routes>
       </div> 
     );
