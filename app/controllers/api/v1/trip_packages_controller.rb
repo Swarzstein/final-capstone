@@ -35,7 +35,11 @@ class Api::V1::TripPackagesController < ApplicationController
 
   # Action to delete a trip package
   def destroy
-    @trip_package.destroy
+    try {
+      @trip_package.destroy
+    } catch {
+      render json: { error: 'Cannot delete trip package' }, status: 400
+    }
   end
 
   private

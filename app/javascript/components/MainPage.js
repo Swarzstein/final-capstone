@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTripPackagesAsync } from '../redux/tripPackageSlice';
 import Item from './Item';
-// import { setSelectedTripPackage } from '../redux/tripPackageSlice';
 import { useParams, Link } from 'react-router-dom';
+import NavPanel from './NavPanel';
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -23,10 +23,6 @@ const MainPage = () => {
     }
   }, [id, tripPackages]);
 
-  const setItem = (tripPackage) => {
-    console.log("dispatching")
-    dispatch(setSelectedItem(tripPackage));
-  }
 
   const heatMap = () => (
     <div className="heatmap__message">
@@ -35,7 +31,8 @@ const MainPage = () => {
   );
 
   return (
-    <>
+    <div className='main-container'>
+      <NavPanel />
       <div className="items">
         <div className="items__header">
           <h1>Our Services</h1>
@@ -44,28 +41,16 @@ const MainPage = () => {
         <div className="items__Lists">
           {tripPackages && tripPackages.length
             ? tripPackages.map((tripPackage) => (
-                // <Link key={tripPackage.id} to={`/detail/${tripPackage.id}`}>
-                  <Item
-                    key={tripPackage.id}
-                    item={tripPackage}
-                    onClick={() =>{ setItem(tripPackage)}}
-                  />
-                // </Link>
+                <Item
+                  key={tripPackage.id}
+                  item={tripPackage}
+                  onClick={() =>{ setItem(tripPackage)}}
+                />
               ))
             : heatMap()}
         </div>
       </div>
-
-      {/* {selectedItem && (
-        <div className="selected-item-details">
-          <img src={selectedItem.image_url} alt={selectedItem.name} />
-          <h2>{selectedItem.name}</h2>
-          <p>{selectedItem.description}</p>
-          <p>Country: {selectedItem.country}</p>
-          <p>Price: {selectedItem.price}</p>
-        </div>
-      )} */}
-    </>
+    </div>
   );
 };
 

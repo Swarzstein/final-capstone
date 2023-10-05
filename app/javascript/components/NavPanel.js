@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function NavPanel() {
+const NavPanel = () => {
   return (
     <div className="h-nav-bar">
       <div className="logo">
@@ -18,3 +18,5 @@ export default function NavPanel() {
     </div>
   );
 }
+
+export default NavPanel;

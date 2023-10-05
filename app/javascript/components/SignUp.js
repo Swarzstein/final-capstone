@@ -4,7 +4,7 @@ import { useState } from "react";
 import { signUp } from "../redux/sessionReducer/sessionActions";
 import { Link } from "react-router-dom";
 
-export default function SignUp() {
+const SignUp = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -13,7 +13,7 @@ export default function SignUp() {
     dispatch(signUp(name));
     setTimeout(() => {
       window.location.reload();
-  }, 500);
+    }, 500);
   };
 
   return (
@@ -37,3 +37,5 @@ export default function SignUp() {
     </>
   );
 }
+
+export default SignUp;
