@@ -48,7 +48,7 @@ const MainPage = () => {
                   <Item
                     key={tripPackage.id}
                     item={tripPackage}
-                    onClick={ setItem(tripPackage)}
+                    onClick={() =>{ setItem(tripPackage)}}
                   />
                 // </Link>
               ))
