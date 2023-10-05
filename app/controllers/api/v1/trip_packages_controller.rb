@@ -1,5 +1,5 @@
 class Api::V1::TripPackagesController < ApplicationController
-  before_action :set_trip_package, only: %i[ show edit update destroy ]
+  before_action :set_trip_package, only: %i[show edit update destroy]
 
   # Action to fetch all trip packages
   def index

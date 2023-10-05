@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 import { Route, Navigate, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import MyTrips from './components/MyTrips';
+import AddItemForm from './components/AddItemForm';
 import MainPage from './components/MainPage';
 import Details from './components/Details';
+
 
 function App() {
   const user = useSelector((state) => state.session.user);
@@ -28,6 +29,7 @@ function App() {
           <Route path="sign_up" element={<Navigate to="/" />} />
           <Route path="sign_in" element={<Navigate to="/" />} />
           <Route path="details/:id" element={<Details />} />
+          <Route path="/add_trip" element={<AddItemForm />} />
         </Routes>
       </div> 
     );
