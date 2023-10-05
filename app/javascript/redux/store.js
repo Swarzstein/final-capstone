@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import sessionReducer from './sessionReducer/sessionReducer';
 import tripPackageSlice from './tripPackageSlice';
 
 const store = configureStore({
   reducer: {
-    
-    tripPackages: tripPackageSlice
+    session: sessionReducer,
+    tripPackages: tripPackageSlice,
   },
 });
 

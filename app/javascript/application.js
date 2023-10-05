@@ -1,28 +1,23 @@
-// // Entry point for the build script in your package.json
-// // import "@hotwired/turbo-rails"
-// // import "./controllers"
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import App from './App';
-
-// ReactDOM.render(
-//   <App/>,
-//   document.getElementById('root'),
-// );
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './App';
+import { BrowserRouter} from 'react-router-dom';
 import store from './redux/store';
+import App from './App';
+import { getUser } from './redux/sessionReducer/sessionActions';
 import { fetchTripPackagesAsync } from './redux/tripPackageSlice';
 
 store.dispatch(fetchTripPackagesAsync());
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+store.dispatch(getUser());
+
+ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
+    <Provider store={store} >
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
+  document.getElementById('root'),
 );
