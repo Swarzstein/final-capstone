@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+body {
   text-align: center;
   padding: 0;
   margin: 0;
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-right: 1px solid #F8F8F8;
+  border-right: 1px solid #f8f8f8;
 }
 
 .nav {
@@ -61,12 +61,12 @@
 
 .nav-link:hover {
   color: #fff;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
 }
 
 .nav-link:active {
   color: #fff;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
 }
 
 .pack-details {
@@ -113,10 +113,6 @@
 
 .name-container h1 {
   width: 15vw;
-}
-
-.desc-table {
-
 }
 
 .description {
