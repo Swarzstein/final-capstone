@@ -11,9 +11,7 @@ const Login = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(login(name));
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
+    
   };
   return (
     <div className="session-form">
