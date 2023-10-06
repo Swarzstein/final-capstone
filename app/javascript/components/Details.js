@@ -2,6 +2,8 @@ import React from "react";
 import NavPanel from "./NavPanel";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
+import { BsCaretLeft } from "react-icons/bs";
+
 
 const Details = () => {
 
@@ -13,8 +15,11 @@ const Details = () => {
     <div className="main-container">
       <NavPanel />
       <div className="pack-details">
-        <div className="trip-pack-img-container">
-          <img src={tripPakage.image_url} alt="trip" />
+        <div className="trip-pack-container">
+          <div className="trip-pack-img-container">
+            <img src={tripPakage.image_url} alt="trip" />
+          </div>
+          <button className="back-btn"><BsCaretLeft /> </button>
         </div>
         <div className="details-container">
           <div className="details">
@@ -23,12 +28,12 @@ const Details = () => {
             </div>
             <table className="cesc-table">
               <tr>
-                <td>Country:</td>
-                <td>{tripPakage.country}</td>
+                <td className="tl">Country:</td>
+                <td className="tr">{tripPakage.country}</td>
               </tr>
               <tr>
-                <td>Price:</td>
-                <td>{tripPakage.price}$</td>
+                <td className="tl">Price:</td>
+                <td className="tr">{tripPakage.price}$</td>
               </tr>
             </table>
             <div>

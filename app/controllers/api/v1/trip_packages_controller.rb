@@ -35,8 +35,9 @@ class Api::V1::TripPackagesController < ApplicationController
 
   # Action to delete a trip package
   def destroy
-    try { @trip_package.destroy }
-    catch { |e| render json: { error: e.message }, status: :unprocessable_entity }
+    if !@trip_package.destroy
+      render json: { error: @trip_package.errors.full_messages }, status: 400
+    end
   end
 
   private

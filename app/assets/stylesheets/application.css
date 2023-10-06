@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600&family=Roboto+Condensed&display=swap');
 
 body {
   text-align: center;
@@ -31,11 +32,12 @@ body {
 }
 
 .h-nav-bar {
-  width: 20vw;
-  height: 100vh;
+  width: 15vw;
+  padding: 4vh 0;
+  height: 92vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border-right: 1px solid #f8f8f8;
 }
 
@@ -45,11 +47,13 @@ body {
   flex-direction: column;
   align-items: flex-end;
   height: 50vh;
+  font: 3vh 'Gabarito', sans-serif;
+  font-weight: 600;
 }
 
 .nav-link {
   width: 80%;
-  padding: 4px 10px;
+  padding: 6px 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -69,20 +73,35 @@ body {
   background-color: #97bf0f;
 }
 
+.social-media {
+  width: 100%;
+  padding: 3vh 0;
+  display: flex;
+  font: 3vh 'Gabarito', sans-serif;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #000;
+}
+
 .pack-details {
-  width: 80vw;
+  width: 85vw;
   display: flex;
   align-items: center;
   height: 100vh;
 }
 
 .details-container {
-  width: 18vw;
+  width: 16vw;
+  padding-right: 2vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .details {
@@ -91,8 +110,18 @@ body {
   align-items: stretch;
 }
 
+.trip-pack-container {
+  width: 67vw;
+  height: 90vh;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 .trip-pack-img-container {
-  width: 54vw;
+  width: 61vw;
   padding: 0 3vw;
   height: 60vh;
   display: flex;
@@ -106,15 +135,45 @@ body {
 }
 
 .name-container {
+  font-family: 'Gabarito', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.name-container h1 {
-  width: 15vw;
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
 }
 
 .description {
-  text-align: justify;
+  text-align: left;
+}
+
+.reserve-btn {
+  background: #97bf0f;
+  border: none;
+  border-radius: 2em;
+  width: 18vh;
+  height: 5.5vh;
+  color: #f8f8f8;
+  font-weight: bold;
+  font-size: 1.8vh;
+}
+
+.back-btn {
+  background: #97bf0f;
+  border: none;
+  border-start-end-radius: 2em;
+  border-end-end-radius: 2em;
+  padding: 8px 17px;
+  width: 75px;
+  color: #f8f8f8;
+  font-weight: bold;
+  font-size: 3vh;
+  display: flex;
+  justify-content: center;
 }
