@@ -3,11 +3,10 @@ import { useSelector } from 'react-redux';
 import { Route, Navigate, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import MyTrips from './components/MyTrips';
 import MainPage from './components/MainPage';
 import Details from './components/Details';
 
-function App() {
+const App = () => {
   const user = useSelector((state) => state.session.user);
   if (!user) {
     return (

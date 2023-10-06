@@ -1,5 +1,5 @@
 class Api::V1::TripPackagesController < ApplicationController
-  before_action :set_trip_package, only: %i[ show edit update destroy ]
+  before_action :set_trip_package, only: %i[show edit update destroy]
 
   # Action to fetch all trip packages
   def index
@@ -35,7 +35,9 @@ class Api::V1::TripPackagesController < ApplicationController
 
   # Action to delete a trip package
   def destroy
-    @trip_package.destroy
+    return if @trip_package.destroy
+
+    render json: { error: @trip_package.errors.full_messages }, status: 400
   end
 
   private

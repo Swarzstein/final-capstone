@@ -1,10 +1,9 @@
 import axios from "axios"
-import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, CURRENT_USER } from "../actionTypes"
+import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT_SUCCESS, CURRENT_USER, LOGOUT_FAILURE, SESSION_FAILURE } from "../actionTypes"
 
 export const signUp = (name) => {
   return  async dispatch => {
     try {
-      // const response = await axios.post('/api/v1/users', { user: {name} });
       const response = await axios.post('api/v1/users', {
         user: { name }
       },{
@@ -57,10 +56,13 @@ export const logout = () => {
     try {
       await axios.delete('/api/v1/users/sign_out');
       dispatch({
-        type: LOGOUT
+        type: LOGOUT_SUCCESS
       })
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: LOGOUT_FAILURE,
+        payload: error.response.data.error
+      })
     }
   }
 }
@@ -75,7 +77,10 @@ export const getUser = () => {
         payload: user
       })
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: SESSION_FAILURE,
+        payload: error.response.data.error
+      })
     }
   }
 }

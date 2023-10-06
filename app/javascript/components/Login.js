@@ -4,7 +4,7 @@ import { useState } from "react";
 import { login } from "../redux/sessionReducer/sessionActions";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+const Login = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -16,23 +16,25 @@ export default function Login() {
     }, 500);
   };
   return (
-    <>
+    <div className="session-form">
     <form onSubmit={handleSubmit}>
       <h1>Login</h1>
       <h3>Log in introducing your username</h3>
       <br/>
       <label>
-        Username:
+        Username: 
         <input
           type="text"
           value={name}
           onChange={e => setName(e.target.value)}
         />
       </label>
-      <input type="submit" value="Submit" />
+      <input className="submit" type="submit" value="Submit" />
     </form>
     <br/>
-    <Link to="/sign_up">Sign Up</Link>
-    </>
+    <Link to="/sign_up" className="session-link">Sign Up</Link>
+    </div>
   );
 }
+
+export default Login;

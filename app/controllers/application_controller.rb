@@ -1,10 +1,9 @@
-# frozen_string_literal: true
-
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id] # if session[:user_id] is true, then execute User.find_by(id: session[:user_id])
+    # if session[:user_id] is true, then execute User.find_by(id: session[:user_id])
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
   def logged_in?
@@ -12,9 +11,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    if !logged_in?
-      flash[:alert] = "You must be logged in to perform that action"
-      redirect_to login_path
-    end
+    return if logged_in?
+
+    flash[:alert] = 'You must be logged in to perform that action'
+    redirect_to login_path
   end
 end

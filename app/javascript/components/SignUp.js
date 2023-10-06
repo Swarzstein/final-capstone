@@ -4,7 +4,7 @@ import { useState } from "react";
 import { signUp } from "../redux/sessionReducer/sessionActions";
 import { Link } from "react-router-dom";
 
-export default function SignUp() {
+const SignUp = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -13,7 +13,7 @@ export default function SignUp() {
     dispatch(signUp(name));
     setTimeout(() => {
       window.location.reload();
-  }, 500);
+    }, 500);
   };
 
   return (
@@ -23,17 +23,19 @@ export default function SignUp() {
       <h3>Registrate introducing a new username</h3>
       <br/>
       <label>
-        Username:
+        Username: 
         <input
           type="text"
           value={name}
           onChange={e => setName(e.target.value)}
         />
       </label>
-      <input type="submit" value="Submit" />
+      <input className="submit" type="submit" value="Submit" />
     </form>
     <br/>
-    <Link to="/sign_in">Login</Link>
+    <Link to="/sign_in" className="session-link" >Login</Link>
     </>
   );
 }
+
+export default SignUp;

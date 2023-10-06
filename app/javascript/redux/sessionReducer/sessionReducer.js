@@ -1,4 +1,4 @@
-import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, CURRENT_USER } from "../actionTypes"
+import { SIGNUP_SUCCESS, SIGNUP_FAILURE, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT_SUCCESS, LOGOUT_FAILURE, CURRENT_USER, SESSION_FAILURE } from "../actionTypes"
 
 
 const initialState = {
@@ -6,7 +6,7 @@ const initialState = {
   error: null
 }
 
-export default function sessionReducer(state = initialState, action) {
+const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
     case SIGNUP_SUCCESS:
       return {
@@ -30,17 +30,29 @@ export default function sessionReducer(state = initialState, action) {
         ...state,
         error: action.payload
       }
-    case LOGOUT:
+    case LOGOUT_SUCCESS:
       return {
         ...state,
         user: null
+      }
+    case LOGOUT_FAILURE:
+      return {
+        ...state,
+        error: action.payload
       }
     case CURRENT_USER:
       return {
         ...state,
         user: action.payload
       }
+    case SESSION_FAILURE:
+      return {
+        ...state,
+        error: action.payload
+      }
     default:
       return state
   }
 }
+
+export default sessionReducer;
