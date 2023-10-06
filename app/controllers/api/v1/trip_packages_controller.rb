@@ -22,6 +22,7 @@ class Api::V1::TripPackagesController < ApplicationController
     else
       render json: @trip_package.errors, status: :unprocessable_entity
     end
+    current_user.trip_packages << @trip_package
   end
 
   # Action to update a trip package

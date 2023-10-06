@@ -14,7 +14,26 @@ export const fetchTripPackagesAsync = createAsyncThunk(
     }
   }
 );
-
+export const addItem = createAsyncThunk(
+  'tripPackage/fetchTripPackages',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(
+        `${apiUrl}/trip_packages`,
+        {trip_package},
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('[name=csrf-token]').content,
+          }
+        }
+        );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
 // Initial state for trip packages
 const initialState = {
   tripPackages: [],

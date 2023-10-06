@@ -1,34 +1,38 @@
 import React, { useState } from 'react';
 import './AddItem.css';
 
-const AddItemForm = ({ onSubmit }) => {
+const AddItemForm = () => {
   const [itemName, setItemName] = useState('');
   const [itemDescription, setItemDescription] = useState('');
   const [itemPrice, setItemPrice] = useState('');
   const [itemImage, setItemImage] = useState('');
+  const [itemcountry, setItemcountry] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    onSubmit({
+    dispatch(addItem({
       name: itemName,
       description: itemDescription,
       price: itemPrice,
-      image: itemImage, // Include image in the submitted data
-    });
-    setItemName('');
+      image: itemImage,
+      country: itemcountry,
+    }));
+
+    setItemName();
     setItemDescription('');
     setItemPrice('');
+    setItemcountry(''),
     setItemImage('');
   };
+  
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Trip_Pakage Name:
         <input
           type="text"
-          value={itemName}
-          onChange={(e) => setItemName(e.target.value)}
+          value={Trip_PakageName}
+          onChange={(e) => setTrip_PakageName(e.target.value)}
         />
       </label>
       <br />
@@ -36,7 +40,7 @@ const AddItemForm = ({ onSubmit }) => {
       <label>
       Trip_Pakage Description:
         <textarea
-          value={itemDescription}
+          value={Trip_PakageDescription}
           onChange={(e) => setItemDescription(e.target.value)}
         />
       </label>
@@ -62,7 +66,17 @@ const AddItemForm = ({ onSubmit }) => {
       </label>
       <br />
 
-      <button type="submit">Add Item</button>
+      <label>
+      Country:
+        <input
+          type="number"
+          value={itemPrice}
+          onChange={(e) => setItemPrice(e.target.value)}
+        />
+      </label>
+      <br />
+
+      <button type="submit" value="Submit">Add Item</button>
     </form>
   );
 };
