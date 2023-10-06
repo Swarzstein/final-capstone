@@ -11,9 +11,7 @@ const SignUp = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(signUp(name));
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
+    
   };
 
   return (

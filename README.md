@@ -202,7 +202,7 @@ Example:
 - GitHub: [@Swarzstein](https://github.com/Swarzstein)
 - LinkedIn: [Juan Zorrilla](https://www.linkedin.com/in/juan-a-zorrilla/)
 
-👤 **Therese Tuyisabe** `(Left the group because of sickness and tiredness)`
+👤 **Therese Tuyisabe** 
 
 - GitHub: [@theresetuyi](https://github.com/theresetuyi)
 - Twitter: [@THERESETUYISAB2](https://twitter.com/THERESETUYISAB2)
@@ -239,6 +239,16 @@ Feel free to check the [issues page](https://github.com/Swarzstein/final-capston
 > Write a message to encourage readers to support your project
 
 If you like this project Give us a Star ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Kanban board -->
+
+## ⭐️ Kanban board <a name="support"></a>
+
+[Kanbanboard](https://github.com/users/Swarzstein/projects/2/views/1)
+
+![Alt text](image.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
