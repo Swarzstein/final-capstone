@@ -108,6 +108,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .trip-pack-container {
@@ -141,6 +142,15 @@ body {
   align-items: flex-end;
 }
 
+.shadow-r {
+  background-color: #e2e3e5;
+}
+
+td {
+  border: none;
+  padding: 0.5vh 1vh;
+}
+
 .tl {
   text-align: left;
 }
@@ -151,6 +161,7 @@ body {
 
 .description {
   text-align: left;
+  padding: 0 1vw;
 }
 
 .reserve-btn {

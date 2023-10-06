@@ -27,7 +27,7 @@ const Details = () => {
               <h1>{tripPakage.name}</h1>
             </div>
             <table className="cesc-table">
-              <tr>
+              <tr className="shadow-r">
                 <td className="tl">Country:</td>
                 <td className="tr">{tripPakage.country}</td>
               </tr>
