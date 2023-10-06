@@ -19,7 +19,11 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Gabarito', sans-serif;
+}
+
+.session-form {
+  font-size: larger;
 }
 
 .main-container {
@@ -187,4 +191,25 @@ td {
   font-size: 3vh;
   display: flex;
   justify-content: center;
+}
+
+.submit {
+  background: #97bf0f;
+  border: none;
+  border-start-end-radius: 2em;
+  border-end-end-radius: 2em;
+  padding: 3px 17px;
+  margin-left: -1px;
+  width: 75px;
+  color: #f8f8f8;
+}
+
+.session-link {
+  background: #97bf0f;
+  border: none;
+  border-radius: 2em;
+  color: #f8f8f8;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1vh 1.7vh;
 }
