@@ -202,7 +202,7 @@ Example:
 - GitHub: [@Swarzstein](https://github.com/Swarzstein)
 - LinkedIn: [Juan Zorrilla](https://www.linkedin.com/in/juan-a-zorrilla/)
 
-👤 **Therese Tuyisabe**
+👤 **Therese Tuyisabe** `(Left the group because of sickness and tiredness)`
 
 - GitHub: [@theresetuyi](https://github.com/theresetuyi)
 - Twitter: [@THERESETUYISAB2](https://twitter.com/THERESETUYISAB2)
